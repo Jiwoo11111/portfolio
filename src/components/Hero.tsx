@@ -13,7 +13,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <img src="public/profile.JPG" alt="석지우 프로필" />
+          <img src="profile.JPG" alt="석지우 프로필" />
         </motion.div>
 
         {/* INTRO */}
