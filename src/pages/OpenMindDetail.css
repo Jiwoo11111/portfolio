@@ -1,6 +1,6 @@
 /* =========================================================
    OPENMIND DETAIL
-   Main Portfolio Dark Theme
+   Compact Portfolio Layout
 ========================================================= */
 
 .openmind-detail {
@@ -8,25 +8,34 @@
   --om-bg-soft: #0d0d0d;
   --om-surface: #111111;
   --om-surface-hover: #181818;
-
   --om-text: #f5f5f7;
   --om-text-soft: #c9c9cc;
   --om-muted: #85858b;
   --om-dim: #55555b;
-
   --om-lime: #c8ed62;
   --om-yellow: #ded06a;
-
-  --om-line: rgba(255, 255, 255, 0.07);
-  --om-line-light: rgba(255, 255, 255, 0.12);
+  --om-line: rgba(255, 255, 255, 0.08);
 
   width: 100%;
   min-height: 100vh;
-
   background: var(--om-bg);
   color: var(--om-text);
-
   overflow-x: hidden;
+}
+
+.openmind-detail *,
+.openmind-detail img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.openmind-detail h1,
+.openmind-detail h2,
+.openmind-detail h3,
+.openmind-detail p,
+.openmind-detail span,
+.openmind-detail a {
+  overflow-wrap: break-word;
 }
 
 
@@ -35,11 +44,8 @@
 ========================================================= */
 
 .openmind-hero {
-  position: relative;
-
-  min-height: 100vh;
-
-  padding: 45px 8vw 70px;
+  min-height: 88vh;
+  padding: 42px 7vw 55px;
 
   display: flex;
   flex-direction: column;
@@ -47,39 +53,30 @@
 
   background:
     radial-gradient(
-      circle at 78% 25%,
-      rgba(200, 237, 98, 0.045),
+      circle at 80% 20%,
+      rgba(200, 237, 98, 0.05),
       transparent 30%
     ),
     var(--om-bg);
-
-  color: var(--om-text);
 }
-
-
-/* Back */
 
 .openmind-back {
   position: absolute;
-
-  top: 45px;
-  left: 8vw;
+  top: 42px;
+  left: 7vw;
 
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
 
   color: var(--om-muted);
-
   text-decoration: none;
 
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 2px;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .openmind-back:hover {
@@ -87,26 +84,19 @@
   transform: translateX(-3px);
 }
 
-
-/* =========================================================
-   TITLE
-========================================================= */
-
 .openmind-title {
-  margin-bottom: 110px;
+  margin-bottom: 75px;
 }
 
 .openmind-title > span {
   display: block;
-
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   color: var(--om-yellow);
 
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 4px;
-  text-transform: uppercase;
 }
 
 .openmind-title h1 {
@@ -114,30 +104,27 @@
 
   color: var(--om-text);
 
-  font-size: clamp(80px, 15vw, 220px);
-  line-height: 0.8;
+  font-size: clamp(72px, 13vw, 190px);
+  line-height: 0.82;
 
   font-weight: 600;
-
-  letter-spacing: -0.085em;
+  letter-spacing: -0.08em;
 }
 
 .openmind-title p {
-  max-width: 800px;
-
-  margin: 50px 0 0;
+  max-width: 700px;
+  margin: 38px 0 0;
 
   color: var(--om-muted);
 
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(16px, 1.8vw, 23px);
   line-height: 1.6;
-
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
 }
 
 
 /* =========================================================
-   PROJECT META
+   META
 ========================================================= */
 
 .openmind-meta {
@@ -145,22 +132,16 @@
   grid-template-columns: repeat(4, 1fr);
 
   border-top: 1px solid var(--om-line);
-
-  padding-top: 20px;
-}
-
-.openmind-meta > div {
-  min-width: 0;
+  padding-top: 18px;
 }
 
 .openmind-meta span {
   display: block;
-
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 
   color: var(--om-lime);
 
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 2px;
 }
@@ -171,119 +152,90 @@
   color: var(--om-text-soft);
 
   font-size: 12px;
-  letter-spacing: -0.2px;
 }
 
 
 /* =========================================================
-   COVER
+   PROJECT GALLERY
 ========================================================= */
 
-.openmind-cover {
-  padding: 0 8vw;
-
-  background: var(--om-bg);
-}
-
-.openmind-cover-image {
-  position: relative;
-
-  width: 100%;
-  height: min(72vw, 760px);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  border: 1px solid var(--om-line);
-
-  border-radius: 20px;
+.openmind-gallery {
+  padding: 100px 7vw 120px;
 
   background:
     radial-gradient(
-      circle at 50% 45%,
-      rgba(200, 237, 98, 0.075),
-      transparent 34%
+      circle at 50% 0%,
+      rgba(200, 237, 98, 0.035),
+      transparent 35%
     ),
-    linear-gradient(
-      145deg,
-      #181818,
-      #0e0e0e
-    );
+    #0b0b0b;
+}
+
+.openmind-gallery-header {
+  max-width: 1400px;
+  margin: 0 auto 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--om-line);
+  padding-bottom: 16px;
+}
+
+.openmind-gallery-header span {
+  color: var(--om-lime);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.openmind-gallery-header p {
+  margin: 0;
+  color: var(--om-muted);
+  font-size: 11px;
+}
+
+.openmind-gallery-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.55fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.openmind-gallery-main,
+.openmind-gallery-sub {
+  overflow: hidden;
+
+  border: 1px solid var(--om-line);
+  border-radius: 12px;
+
+  background: #151515;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Decorative circles */
-
-.openmind-cover-image::before {
-  content: "";
-
-  position: absolute;
-
-  width: 55%;
-  aspect-ratio: 1;
-
-  border: 1px solid rgba(200, 237, 98, 0.12);
-
-  border-radius: 50%;
-
-  transform: rotate(-18deg);
-}
-
-.openmind-cover-image::after {
-  content: "";
-
-  position: absolute;
-
-  width: 42%;
-  aspect-ratio: 1;
-
-  border: 1px solid rgba(255, 255, 255, 0.07);
-
-  border-radius: 50%;
-
-  transform: rotate(35deg);
-}
-
-.openmind-cover-image span {
-  position: relative;
-  z-index: 1;
-
-  color: var(--om-text);
-
-  font-size: clamp(30px, 5vw, 70px);
-
-  font-weight: 600;
-
-  letter-spacing: -4px;
-}
-
-
-/* Actual image */
-
-.openmind-cover-image img {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  height: 100%;
-
+.openmind-gallery-main img,
+.openmind-gallery-sub img {
   display: block;
+  width: 100%;
+  height: auto;
 
-  object-fit: cover;
-
-  transition:
-    transform 1.2s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition: transform 0.7s ease;
 }
 
-.openmind-cover-image:hover img {
-  transform: scale(1.025);
+.openmind-gallery-main:hover img,
+.openmind-gallery-sub:hover img {
+  transform: scale(1.015);
+}
+
+.openmind-gallery-sub {
+  margin-top: 80px;
 }
 
 
@@ -293,35 +245,30 @@
 
 .openmind-section {
   width: 100%;
-  max-width: 1400px;
-
+  max-width: 1500px;
   margin: 0 auto;
 
-  padding: 190px 8vw;
+  padding: 120px 7vw;
 
   display: grid;
-  grid-template-columns: 180px minmax(0, 850px);
-
-  gap: 90px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 70px;
 
   background: var(--om-bg);
-
-  color: var(--om-text);
 }
 
 .openmind-section-number {
-  padding-top: 8px;
+  padding-top: 6px;
 
   color: var(--om-muted);
 
   font-size: 9px;
   font-weight: 500;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
 }
 
 .openmind-section-number span {
-  margin-right: 14px;
-
+  margin-right: 12px;
   color: var(--om-lime);
 }
 
@@ -330,7 +277,7 @@
 }
 
 .openmind-eyebrow {
-  margin: 0 0 28px;
+  margin: 0 0 20px;
 
   color: var(--om-lime);
 
@@ -344,38 +291,35 @@
 
   color: var(--om-text);
 
-  font-size: clamp(38px, 4.4vw, 64px);
-
-  line-height: 1.22;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.2;
 
   font-weight: 500;
-
-  letter-spacing: -3px;
+  letter-spacing: -2.8px;
 }
 
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
 .openmind-description {
-  max-width: 650px;
-
-  margin-top: 70px;
-
-  color: var(--om-muted);
+  max-width: 720px;
+  margin-top: 45px;
 }
 
 .openmind-description p {
-  margin: 0 0 27px;
+  margin: 0 0 18px;
 
   color: var(--om-muted);
 
-  font-size: 15px;
-  line-height: 2;
-
-  letter-spacing: -0.3px;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: -0.2px;
 }
 
 .openmind-description strong {
   color: var(--om-text);
-
-  font-weight: 600;
 }
 
 
@@ -386,9 +330,6 @@
 .openmind-feature-section {
   max-width: none;
 
-  padding-left: 8vw;
-  padding-right: 8vw;
-
   background:
     radial-gradient(
       circle at 85% 15%,
@@ -396,77 +337,62 @@
       transparent 30%
     ),
     var(--om-bg-soft);
-
-  color: var(--om-text);
-}
-
-.openmind-feature-section .openmind-section-number {
-  color: var(--om-muted);
-}
-
-.openmind-feature-section .openmind-section-number span {
-  color: var(--om-lime);
-}
-
-.openmind-feature-section .openmind-eyebrow {
-  color: var(--om-lime);
-}
-
-.openmind-feature-section h2 {
-  color: var(--om-text);
 }
 
 .openmind-feature-list {
-  margin-top: 100px;
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   border-top: 1px solid var(--om-line);
 }
 
 .openmind-feature {
-  padding: 38px 0;
+  min-height: 155px;
+  padding: 28px 30px;
 
   display: grid;
-  grid-template-columns: 55px 1fr;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
 
   border-bottom: 1px solid var(--om-line);
+  border-right: 1px solid var(--om-line);
 
-  transition:
-    padding 0.4s ease,
-    background 0.4s ease;
+  transition: background 0.3s ease;
+}
+
+.openmind-feature:nth-child(even) {
+  border-right: none;
 }
 
 .openmind-feature:hover {
-  padding-left: 15px;
-
   background: rgba(200, 237, 98, 0.018);
 }
 
 .openmind-feature > span {
   color: var(--om-dim);
-
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .openmind-feature h3 {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 
   color: var(--om-text);
 
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 500;
-
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
 }
 
 .openmind-feature p {
-  max-width: 600px;
-
+  max-width: 480px;
   margin: 0;
 
   color: var(--om-muted);
 
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 12px;
+  line-height: 1.75;
 }
 
 
@@ -476,58 +402,56 @@
 
 .openmind-tech-section {
   background: #111111;
-
   color: var(--om-text);
 }
 
 .openmind-tech-list {
-  margin-top: 100px;
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   border-top: 1px solid var(--om-line);
 }
 
 .openmind-tech-item {
-  min-height: 100px;
+  min-height: 90px;
+  padding: 20px 25px;
 
   display: grid;
-  grid-template-columns: 55px 1fr 1fr;
+  grid-template-columns: 35px 1fr;
 
-  align-items: center;
+  align-content: center;
 
   border-bottom: 1px solid var(--om-line);
-
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease;
+  border-right: 1px solid var(--om-line);
 }
 
-.openmind-tech-item:hover {
-  padding-left: 15px;
-
-  background: rgba(255, 255, 255, 0.015);
+.openmind-tech-item:nth-child(even) {
+  border-right: none;
 }
 
 .openmind-tech-item > span {
   color: var(--om-lime);
-
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .openmind-tech-item strong {
   color: var(--om-text);
 
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
-
-  letter-spacing: -0.7px;
+  letter-spacing: -0.5px;
 }
 
 .openmind-tech-item p {
-  margin: 0;
+  grid-column: 2;
+
+  margin: 4px 0 0;
 
   color: var(--om-muted);
 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 
@@ -536,50 +460,43 @@
 ========================================================= */
 
 .openmind-role-section {
-  background:
-    radial-gradient(
-      circle at 15% 30%,
-      rgba(200, 237, 98, 0.025),
-      transparent 35%
-    ),
-    var(--om-bg);
-
-  color: var(--om-text);
+  background: var(--om-bg);
 }
 
 .openmind-role-list {
-  margin-top: 90px;
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   border-top: 1px solid var(--om-line);
 }
 
 .openmind-role-list > div {
-  min-height: 90px;
+  min-height: 80px;
+  padding: 20px 25px;
 
   display: flex;
   align-items: center;
-
-  gap: 50px;
+  gap: 25px;
 
   border-bottom: 1px solid var(--om-line);
+  border-right: 1px solid var(--om-line);
 
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease;
+  transition: background 0.3s ease;
+}
+
+.openmind-role-list > div:nth-child(even) {
+  border-right: none;
 }
 
 .openmind-role-list > div:hover {
-  padding-left: 15px;
-
   background: rgba(200, 237, 98, 0.018);
 }
 
 .openmind-role-list span {
-  width: 30px;
-
   color: var(--om-lime);
-
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .openmind-role-list p {
@@ -587,7 +504,7 @@
 
   color: var(--om-text-soft);
 
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -596,150 +513,14 @@
 ========================================================= */
 
 .openmind-learning {
-  padding-bottom: 220px;
-
-  background: var(--om-bg);
+  padding-bottom: 150px;
 }
 
 .openmind-learning .openmind-description {
+  margin-top: 40px;
+
   border-top: 1px solid var(--om-line);
-
-  padding-top: 45px;
-}
-
-
-/* =========================================================
-   PROJECT SCREENSHOTS
-========================================================= */
-
-.openmind-gallery {
-  padding: 140px 8vw 160px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(200, 237, 98, 0.035),
-      transparent 35%
-    ),
-    #0b0b0b;
-
-  overflow: hidden;
-}
-
-.openmind-gallery-header {
-  max-width: 1400px;
-
-  margin: 0 auto 60px;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  border-bottom: 1px solid var(--om-line);
-
-  padding-bottom: 20px;
-}
-
-.openmind-gallery-header span {
-  color: var(--om-lime);
-
-  font-size: 9px;
-  font-weight: 600;
-
-  letter-spacing: 0.18em;
-}
-
-.openmind-gallery-header p {
-  margin: 0;
-
-  color: var(--om-muted);
-
-  font-size: 11px;
-}
-
-
-/* Gallery grid */
-
-.openmind-gallery-grid {
-  max-width: 1400px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1.55fr 0.85fr;
-
-  gap: 32px;
-
-  align-items: start;
-}
-
-
-/* Main image */
-
-.openmind-gallery-main {
-  width: 100%;
-
-  background: #151515;
-
-  border: 1px solid var(--om-line);
-
-  border-radius: 12px;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.025);
-}
-
-.openmind-gallery-main img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  transition:
-    transform 0.7s ease;
-}
-
-.openmind-gallery-main:hover img {
-  transform: scale(1.01);
-}
-
-
-/* Sub image */
-
-.openmind-gallery-sub {
-  width: 100%;
-
-  margin-top: 100px;
-
-  background: #151515;
-
-  border: 1px solid var(--om-line);
-
-  border-radius: 12px;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.025);
-}
-
-.openmind-gallery-sub img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  transition:
-    transform 0.7s ease;
-}
-
-.openmind-gallery-sub:hover img {
-  transform: scale(1.01);
+  padding-top: 35px;
 }
 
 
@@ -748,7 +529,7 @@
 ========================================================= */
 
 .openmind-end {
-  min-height: 600px;
+  min-height: 430px;
 
   display: flex;
   flex-direction: column;
@@ -762,12 +543,10 @@
       transparent 35%
     ),
     #080808;
-
-  color: var(--om-text);
 }
 
 .openmind-end p {
-  margin: 0 0 30px;
+  margin: 0 0 22px;
 
   color: var(--om-yellow);
 
@@ -778,31 +557,21 @@
 .openmind-end a {
   display: flex;
   align-items: center;
-
-  gap: 12px;
+  gap: 10px;
 
   color: var(--om-text);
-
   text-decoration: none;
 
-  font-size: clamp(40px, 6vw, 80px);
-
+  font-size: clamp(40px, 5vw, 70px);
   font-weight: 500;
-
   letter-spacing: -4px;
 
-  transition:
-    gap 0.4s ease,
-    color 0.3s ease,
-    opacity 0.3s ease;
+  transition: 0.35s ease;
 }
 
 .openmind-end a:hover {
-  gap: 25px;
-
+  gap: 22px;
   color: var(--om-lime);
-
-  opacity: 0.85;
 }
 
 
@@ -813,9 +582,8 @@
 @media (max-width: 900px) {
 
   .openmind-hero {
-    min-height: 90vh;
-
-    padding: 35px 6vw 60px;
+    min-height: 82vh;
+    padding: 35px 6vw 50px;
   }
 
   .openmind-back {
@@ -824,7 +592,7 @@
   }
 
   .openmind-title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .openmind-title h1 {
@@ -833,36 +601,21 @@
 
   .openmind-meta {
     grid-template-columns: repeat(2, 1fr);
-
-    row-gap: 30px;
-  }
-
-  .openmind-cover {
-    padding: 0 6vw;
-  }
-
-  .openmind-cover-image {
-    height: 65vw;
-    min-height: 400px;
-  }
-
-  .openmind-section {
-    padding: 130px 6vw;
-
-    grid-template-columns: 120px 1fr;
-
-    gap: 50px;
-  }
-
-  .openmind-feature-section {
-    padding-left: 6vw;
-    padding-right: 6vw;
+    row-gap: 25px;
   }
 
   .openmind-gallery {
     padding-left: 6vw;
     padding-right: 6vw;
   }
+
+  .openmind-section {
+    padding: 100px 6vw;
+
+    grid-template-columns: 110px 1fr;
+    gap: 40px;
+  }
+
 }
 
 
@@ -873,198 +626,42 @@
 @media (max-width: 600px) {
 
   .openmind-hero {
-    min-height: 780px;
-
-    padding: 30px 6vw 45px;
+    min-height: 720px;
+    padding: 30px 6vw 40px;
   }
 
   .openmind-back {
     top: 30px;
     left: 6vw;
-
-    font-size: 9px;
   }
 
   .openmind-title {
-    margin-bottom: 65px;
-  }
-
-  .openmind-title > span {
-    margin-bottom: 18px;
-
-    font-size: 8px;
-    letter-spacing: 3px;
+    margin-bottom: 55px;
   }
 
   .openmind-title h1 {
     font-size: 19vw;
-
-    letter-spacing: -0.09em;
   }
 
   .openmind-title p {
-    margin-top: 35px;
-
-    font-size: 16px;
-    line-height: 1.7;
+    margin-top: 28px;
+    font-size: 15px;
   }
 
   .openmind-meta {
     grid-template-columns: repeat(2, 1fr);
-
-    row-gap: 25px;
-  }
-
-  .openmind-meta span {
-    font-size: 8px;
-  }
-
-  .openmind-meta p {
-    font-size: 11px;
-  }
-
-
-  /* Cover */
-
-  .openmind-cover {
-    padding: 0;
-  }
-
-  .openmind-cover-image {
-    height: 110vw;
-    min-height: 380px;
-
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
-
-  .openmind-cover-image span {
-    font-size: 32px;
-  }
-
-
-  /* Sections */
-
-  .openmind-section {
-    padding: 100px 6vw;
-
-    display: block;
-  }
-
-  .openmind-section-number {
-    margin-bottom: 55px;
-  }
-
-  .openmind-section-content h2 {
-    font-size: 36px;
-
-    line-height: 1.28;
-
-    letter-spacing: -2px;
-  }
-
-  .openmind-description {
-    margin-top: 50px;
-  }
-
-  .openmind-description p {
-    font-size: 14px;
-
-    line-height: 1.9;
-  }
-
-
-  /* Features */
-
-  .openmind-feature-section {
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
-
-  .openmind-feature-list {
-    margin-top: 70px;
-  }
-
-  .openmind-feature {
-    padding: 30px 0;
-
-    grid-template-columns: 40px 1fr;
-  }
-
-  .openmind-feature:hover {
-    padding-left: 0;
-  }
-
-  .openmind-feature h3 {
-    font-size: 18px;
-  }
-
-  .openmind-feature p {
-    font-size: 12px;
-
-    line-height: 1.8;
-  }
-
-
-  /* Technology */
-
-  .openmind-tech-list {
-    margin-top: 65px;
-  }
-
-  .openmind-tech-item {
-    min-height: 95px;
-
-    grid-template-columns: 40px 1fr;
-  }
-
-  .openmind-tech-item strong {
-    font-size: 17px;
-  }
-
-  .openmind-tech-item p {
-    grid-column: 2;
-
-    margin-top: 5px;
-
-    font-size: 11px;
-  }
-
-  .openmind-tech-item:hover {
-    padding-left: 0;
-  }
-
-
-  /* Role */
-
-  .openmind-role-list {
-    margin-top: 65px;
-  }
-
-  .openmind-role-list > div {
-    min-height: 75px;
-
-    gap: 25px;
-  }
-
-  .openmind-role-list > div:hover {
-    padding-left: 0;
-  }
-
-  .openmind-role-list p {
-    font-size: 14px;
+    row-gap: 22px;
   }
 
 
   /* Gallery */
 
   .openmind-gallery {
-    padding: 90px 20px 100px;
+    padding: 75px 20px 85px;
   }
 
   .openmind-gallery-header {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   .openmind-gallery-header p {
@@ -1073,61 +670,118 @@
 
   .openmind-gallery-grid {
     display: flex;
-
     flex-direction: column;
-
-    gap: 24px;
-  }
-
-  .openmind-gallery-main {
-    width: 100%;
-
-    border-radius: 10px;
+    gap: 20px;
   }
 
   .openmind-gallery-sub {
     width: 82%;
+    margin: 0 0 0 auto;
+  }
 
-    margin-top: 0;
-    margin-left: auto;
 
-    border-radius: 10px;
+  /* Sections */
+
+  .openmind-section {
+    padding: 80px 6vw;
+    display: block;
+  }
+
+  .openmind-section-number {
+    margin-bottom: 38px;
+  }
+
+  .openmind-section-content h2 {
+    font-size: 32px;
+    letter-spacing: -1.8px;
+  }
+
+  .openmind-description {
+    margin-top: 35px;
+  }
+
+  .openmind-description p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+
+  /* Features */
+
+  .openmind-feature-list {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .openmind-feature {
+    min-height: auto;
+    padding: 25px 0;
+
+    border-right: none;
+  }
+
+  .openmind-feature:nth-child(even) {
+    border-right: none;
+  }
+
+  .openmind-feature h3 {
+    font-size: 16px;
+  }
+
+  .openmind-feature p {
+    font-size: 11px;
+  }
+
+
+  /* Technology */
+
+  .openmind-tech-list {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .openmind-tech-item {
+    min-height: 80px;
+
+    border-right: none;
+  }
+
+  .openmind-tech-item:nth-child(even) {
+    border-right: none;
+  }
+
+
+  /* Role */
+
+  .openmind-role-list {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .openmind-role-list > div {
+    min-height: 70px;
+    border-right: none;
+  }
+
+  .openmind-role-list > div:nth-child(even) {
+    border-right: none;
+  }
+
+
+  /* Learning */
+
+  .openmind-learning {
+    padding-bottom: 100px;
   }
 
 
   /* End */
 
   .openmind-end {
-    min-height: 450px;
+    min-height: 360px;
   }
 
   .openmind-end a {
-    font-size: 48px;
-
-    letter-spacing: -3px;
+    font-size: 45px;
   }
-}
-
-
-/* =========================================================
-   SAFETY
-========================================================= */
-
-.openmind-detail,
-.openmind-detail *,
-.openmind-detail img {
-  max-width: 100%;
-}
-
-.openmind-detail {
-  overflow-x: hidden;
-}
-
-.openmind-detail h1,
-.openmind-detail h2,
-.openmind-detail h3,
-.openmind-detail p,
-.openmind-detail span,
-.openmind-detail a {
-  overflow-wrap: break-word;
 }

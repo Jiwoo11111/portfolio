@@ -1,6 +1,6 @@
 /* =========================================================
    LINKBRARY DETAIL
-   Main Portfolio Dark Theme
+   Compact Portfolio Layout
 ========================================================= */
 
 .linkbrary-detail {
@@ -8,25 +8,34 @@
   --lb-bg-soft: #0d0d0d;
   --lb-surface: #111111;
   --lb-surface-hover: #181818;
-
   --lb-text: #f5f5f7;
   --lb-text-soft: #c9c9cc;
   --lb-muted: #85858b;
   --lb-dim: #55555b;
-
   --lb-lime: #c8ed62;
   --lb-yellow: #ded06a;
-
-  --lb-line: rgba(255, 255, 255, 0.07);
-  --lb-line-light: rgba(255, 255, 255, 0.12);
+  --lb-line: rgba(255, 255, 255, 0.08);
 
   width: 100%;
   min-height: 100vh;
-
   background: var(--lb-bg);
   color: var(--lb-text);
-
   overflow-x: hidden;
+}
+
+.linkbrary-detail *,
+.linkbrary-detail img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.linkbrary-detail h1,
+.linkbrary-detail h2,
+.linkbrary-detail h3,
+.linkbrary-detail p,
+.linkbrary-detail span,
+.linkbrary-detail a {
+  overflow-wrap: break-word;
 }
 
 
@@ -35,11 +44,8 @@
 ========================================================= */
 
 .linkbrary-hero {
-  position: relative;
-
-  min-height: 100vh;
-
-  padding: 45px 8vw 70px;
+  min-height: 88vh;
+  padding: 42px 7vw 55px;
 
   display: flex;
   flex-direction: column;
@@ -47,46 +53,34 @@
 
   background:
     radial-gradient(
-      circle at 78% 25%,
-      rgba(200, 237, 98, 0.045),
+      circle at 80% 20%,
+      rgba(200, 237, 98, 0.05),
       transparent 30%
     ),
     var(--lb-bg);
-
-  color: var(--lb-text);
 }
-
-
-/* Back */
 
 .linkbrary-back {
   position: absolute;
-
-  top: 45px;
-  left: 8vw;
+  top: 42px;
+  left: 7vw;
 
   display: flex;
   align-items: center;
-
-  gap: 9px;
+  gap: 8px;
 
   color: var(--lb-muted);
-
   text-decoration: none;
 
   font-size: 10px;
   font-weight: 500;
-
   letter-spacing: 2px;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .linkbrary-back:hover {
   color: var(--lb-lime);
-
   transform: translateX(-3px);
 }
 
@@ -96,19 +90,17 @@
 ========================================================= */
 
 .linkbrary-title {
-  margin-bottom: 110px;
+  margin-bottom: 75px;
 }
 
 .linkbrary-title > span {
   display: block;
-
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   color: var(--lb-yellow);
 
   font-size: 10px;
   font-weight: 600;
-
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -118,27 +110,22 @@
 
   color: var(--lb-text);
 
-  font-size: clamp(75px, 14vw, 205px);
-
-  line-height: 0.8;
+  font-size: clamp(72px, 13vw, 190px);
+  line-height: 0.82;
 
   font-weight: 600;
-
-  letter-spacing: -0.09em;
+  letter-spacing: -0.08em;
 }
 
 .linkbrary-title p {
-  max-width: 800px;
-
-  margin: 50px 0 0;
+  max-width: 700px;
+  margin: 38px 0 0;
 
   color: var(--lb-muted);
 
-  font-size: clamp(18px, 2vw, 25px);
-
+  font-size: clamp(16px, 1.8vw, 23px);
   line-height: 1.6;
-
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
 }
 
 
@@ -148,12 +135,10 @@
 
 .linkbrary-meta {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
 
   border-top: 1px solid var(--lb-line);
-
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .linkbrary-meta > div {
@@ -162,14 +147,12 @@
 
 .linkbrary-meta span {
   display: block;
-
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 
   color: var(--lb-lime);
 
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 500;
-
   letter-spacing: 2px;
 }
 
@@ -179,8 +162,6 @@
   color: var(--lb-text-soft);
 
   font-size: 12px;
-
-  letter-spacing: -0.2px;
 }
 
 
@@ -189,7 +170,7 @@
 ========================================================= */
 
 .linkbrary-cover {
-  padding: 90px 8vw 130px;
+  padding: 80px 7vw 110px;
 
   background:
     radial-gradient(
@@ -201,23 +182,21 @@
 }
 
 .linkbrary-cover-image {
-  width: min(1100px, 100%);
-
-  min-height: 500px;
+  width: min(1200px, 100%);
+  min-height: 540px;
 
   margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 
   border: 1px solid var(--lb-line);
-
-  border-radius: 20px;
+  border-radius: 18px;
 
   background:
     linear-gradient(
@@ -232,7 +211,9 @@
 }
 
 
-/* Cover decorative glow */
+/* =========================================================
+   COVER DECORATION
+========================================================= */
 
 .linkbrary-cover-image::before {
   content: "";
@@ -264,7 +245,9 @@
 }
 
 
-/* Actual cover image */
+/* =========================================================
+   COVER IMAGE
+========================================================= */
 
 .linkbrary-cover-image img {
   position: relative;
@@ -273,8 +256,7 @@
   display: block;
 
   width: 88%;
-
-  max-width: 1000px;
+  max-width: 1050px;
 
   height: auto;
 
@@ -314,13 +296,12 @@
   background: #151515;
 
   border: 1px solid var(--lb-line);
-
   border-radius: 12px;
 
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.45);
 
-  transform: translateY(20px);
+  transform: translateY(15px);
 
   transition:
     transform 0.8s ease,
@@ -328,7 +309,7 @@
 }
 
 .linkbrary-cover-image:hover .linkbrary-browser {
-  transform: translateY(5px);
+  transform: translateY(3px);
 
   box-shadow:
     0 40px 100px rgba(0, 0, 0, 0.55);
@@ -344,7 +325,6 @@
   align-items: center;
 
   gap: 6px;
-
   padding: 0 14px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -389,14 +369,12 @@
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1px;
 }
 
 .sidebar-line {
-  height: 7px;
-
   width: 75%;
+  height: 7px;
 
   margin-bottom: 18px;
 
@@ -407,7 +385,6 @@
 
 .sidebar-line.active {
   width: 90%;
-
   background: var(--lb-lime);
 }
 
@@ -428,7 +405,6 @@
 
 .browser-heading {
   display: flex;
-
   justify-content: space-between;
 
   margin-bottom: 35px;
@@ -502,17 +478,17 @@
 
 .linkbrary-section {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
 
   margin: 0 auto;
 
-  padding: 190px 8vw;
+  padding: 120px 7vw;
 
   display: grid;
 
-  grid-template-columns: 180px minmax(0, 850px);
+  grid-template-columns: 150px minmax(0, 1fr);
 
-  gap: 90px;
+  gap: 70px;
 
   background: var(--lb-bg);
 
@@ -520,18 +496,17 @@
 }
 
 .linkbrary-section-number {
-  padding-top: 8px;
+  padding-top: 6px;
 
   color: var(--lb-muted);
 
   font-size: 9px;
   font-weight: 500;
-
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
 }
 
 .linkbrary-section-number span {
-  margin-right: 14px;
+  margin-right: 12px;
 
   color: var(--lb-lime);
 }
@@ -541,7 +516,7 @@
 }
 
 .linkbrary-eyebrow {
-  margin: 0 0 28px;
+  margin: 0 0 20px;
 
   color: var(--lb-lime);
 
@@ -556,33 +531,36 @@
 
   color: var(--lb-text);
 
-  font-size: clamp(38px, 4.4vw, 64px);
+  font-size: clamp(34px, 4vw, 58px);
 
-  line-height: 1.22;
+  line-height: 1.2;
 
   font-weight: 500;
 
-  letter-spacing: -3px;
+  letter-spacing: -2.8px;
 }
 
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
 .linkbrary-description {
-  max-width: 650px;
+  max-width: 720px;
 
-  margin-top: 70px;
-
-  color: var(--lb-muted);
+  margin-top: 45px;
 }
 
 .linkbrary-description p {
-  margin: 0 0 27px;
+  margin: 0 0 18px;
 
   color: var(--lb-muted);
 
-  font-size: 15px;
+  font-size: 14px;
 
-  line-height: 2;
+  line-height: 1.9;
 
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 .linkbrary-description strong {
@@ -594,13 +572,11 @@
 
 /* =========================================================
    FEATURES
+   2 × 2 GRID
 ========================================================= */
 
 .linkbrary-feature-section {
   max-width: none;
-
-  padding-left: 8vw;
-  padding-right: 8vw;
 
   background:
     radial-gradient(
@@ -613,144 +589,144 @@
   color: var(--lb-text);
 }
 
-.linkbrary-feature-section .linkbrary-section-number {
-  color: var(--lb-muted);
-}
-
-.linkbrary-feature-section .linkbrary-section-number span {
-  color: var(--lb-lime);
-}
-
-.linkbrary-feature-section .linkbrary-eyebrow {
-  color: var(--lb-lime);
-}
-
-.linkbrary-feature-section h2 {
-  color: var(--lb-text);
-}
-
 .linkbrary-feature-list {
-  margin-top: 100px;
+  margin-top: 55px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
 
   border-top: 1px solid var(--lb-line);
 }
 
 .linkbrary-feature {
-  padding: 38px 0;
+  min-height: 155px;
+
+  padding: 28px 30px;
 
   display: grid;
 
-  grid-template-columns: 55px 1fr;
+  grid-template-columns: 38px 1fr;
+
+  gap: 12px;
 
   border-bottom: 1px solid var(--lb-line);
 
-  transition:
-    padding 0.4s ease,
-    background 0.4s ease;
+  border-right: 1px solid var(--lb-line);
+
+  transition: background 0.3s ease;
+}
+
+.linkbrary-feature:nth-child(even) {
+  border-right: none;
 }
 
 .linkbrary-feature:hover {
-  padding-left: 15px;
-
   background: rgba(200, 237, 98, 0.018);
 }
 
 .linkbrary-feature > span {
   color: var(--lb-dim);
 
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .linkbrary-feature h3 {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 
   color: var(--lb-text);
 
-  font-size: 21px;
+  font-size: 17px;
 
   font-weight: 500;
 
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
 }
 
 .linkbrary-feature p {
-  max-width: 600px;
+  max-width: 480px;
 
-  margin: 0;
-
-  color: var(--lb-muted);
-
-  font-size: 13px;
-
-  line-height: 1.9;
-}
-
-
-/* =========================================================
-   TECHNOLOGY
-========================================================= */
-
-.linkbrary-tech-section {
-  background: #111;
-
-  color: var(--lb-text);
-}
-
-.linkbrary-tech-list {
-  margin-top: 100px;
-
-  border-top: 1px solid var(--lb-line);
-}
-
-.linkbrary-tech-item {
-  min-height: 100px;
-
-  display: grid;
-
-  grid-template-columns: 55px 1fr 1fr;
-
-  align-items: center;
-
-  border-bottom: 1px solid var(--lb-line);
-
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease;
-}
-
-.linkbrary-tech-item:hover {
-  padding-left: 15px;
-
-  background: rgba(255, 255, 255, 0.015);
-}
-
-.linkbrary-tech-item > span {
-  color: var(--lb-lime);
-
-  font-size: 10px;
-}
-
-.linkbrary-tech-item strong {
-  color: var(--lb-text);
-
-  font-size: 20px;
-
-  font-weight: 500;
-
-  letter-spacing: -0.7px;
-}
-
-.linkbrary-tech-item p {
   margin: 0;
 
   color: var(--lb-muted);
 
   font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   TECHNOLOGY
+   2 × 3 GRID
+========================================================= */
+
+.linkbrary-tech-section {
+  background: #111111;
+
+  color: var(--lb-text);
+}
+
+.linkbrary-tech-list {
+  margin-top: 55px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid var(--lb-line);
+}
+
+.linkbrary-tech-item {
+  min-height: 90px;
+
+  padding: 20px 25px;
+
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  align-content: center;
+
+  border-bottom: 1px solid var(--lb-line);
+
+  border-right: 1px solid var(--lb-line);
+}
+
+.linkbrary-tech-item:nth-child(even) {
+  border-right: none;
+}
+
+.linkbrary-tech-item > span {
+  color: var(--lb-lime);
+
+  font-size: 9px;
+}
+
+.linkbrary-tech-item strong {
+  color: var(--lb-text);
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+.linkbrary-tech-item p {
+  grid-column: 2;
+
+  margin: 4px 0 0;
+
+  color: var(--lb-muted);
+
+  font-size: 11px;
 }
 
 
 /* =========================================================
    MY ROLE
+   2 × 2 GRID
 ========================================================= */
 
 .linkbrary-role-section {
@@ -760,39 +736,45 @@
 }
 
 .linkbrary-role-list {
-  margin-top: 90px;
+  margin-top: 55px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
 
   border-top: 1px solid var(--lb-line);
 }
 
 .linkbrary-role-list > div {
-  min-height: 90px;
+  min-height: 80px;
+
+  padding: 20px 25px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 50px;
+  gap: 25px;
 
   border-bottom: 1px solid var(--lb-line);
 
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease;
+  border-right: 1px solid var(--lb-line);
+
+  transition: background 0.3s ease;
+}
+
+.linkbrary-role-list > div:nth-child(even) {
+  border-right: none;
 }
 
 .linkbrary-role-list > div:hover {
-  padding-left: 15px;
-
   background: rgba(200, 237, 98, 0.018);
 }
 
 .linkbrary-role-list span {
-  width: 30px;
-
   color: var(--lb-lime);
 
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .linkbrary-role-list p {
@@ -800,7 +782,7 @@
 
   color: var(--lb-text-soft);
 
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -809,15 +791,17 @@
 ========================================================= */
 
 .linkbrary-development {
-  padding-bottom: 190px;
+  padding-bottom: 130px;
 
   background: var(--lb-bg);
 }
 
 .linkbrary-development .linkbrary-description {
+  margin-top: 40px;
+
   border-top: 1px solid var(--lb-line);
 
-  padding-top: 45px;
+  padding-top: 35px;
 }
 
 
@@ -836,7 +820,7 @@
 }
 
 .linkbrary-learning .linkbrary-section {
-  padding-bottom: 220px;
+  padding-bottom: 150px;
 
   background: transparent;
 }
@@ -847,7 +831,7 @@
 ========================================================= */
 
 .linkbrary-end {
-  min-height: 600px;
+  min-height: 430px;
 
   display: flex;
 
@@ -869,7 +853,7 @@
 }
 
 .linkbrary-end p {
-  margin: 0 0 30px;
+  margin: 0 0 22px;
 
   color: var(--lb-yellow);
 
@@ -883,30 +867,25 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 
   color: var(--lb-text);
 
   text-decoration: none;
 
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(40px, 5vw, 70px);
 
   font-weight: 500;
 
   letter-spacing: -4px;
 
-  transition:
-    gap 0.4s ease,
-    color 0.3s ease,
-    opacity 0.3s ease;
+  transition: 0.35s ease;
 }
 
 .linkbrary-end a:hover {
-  gap: 25px;
+  gap: 22px;
 
   color: var(--lb-lime);
-
-  opacity: 0.85;
 }
 
 
@@ -917,9 +896,9 @@
 @media (max-width: 900px) {
 
   .linkbrary-hero {
-    min-height: 90vh;
+    min-height: 82vh;
 
-    padding: 35px 6vw 60px;
+    padding: 35px 6vw 50px;
   }
 
   .linkbrary-back {
@@ -929,7 +908,7 @@
   }
 
   .linkbrary-title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .linkbrary-title h1 {
@@ -939,23 +918,29 @@
   .linkbrary-meta {
     grid-template-columns: repeat(2, 1fr);
 
-    row-gap: 30px;
+    row-gap: 25px;
   }
 
+
+  /* Cover */
+
   .linkbrary-cover {
-    padding: 70px 6vw 100px;
+    padding: 70px 6vw 90px;
   }
 
   .linkbrary-cover-image {
     min-height: 450px;
   }
 
+
+  /* Sections */
+
   .linkbrary-section {
-    padding: 130px 6vw;
+    padding: 100px 6vw;
 
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 110px 1fr;
 
-    gap: 50px;
+    gap: 40px;
   }
 
   .linkbrary-feature-section {
@@ -972,9 +957,9 @@
 @media (max-width: 600px) {
 
   .linkbrary-hero {
-    min-height: 780px;
+    min-height: 720px;
 
-    padding: 30px 6vw 45px;
+    padding: 30px 6vw 40px;
   }
 
   .linkbrary-back {
@@ -986,7 +971,7 @@
   }
 
   .linkbrary-title {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
   }
 
   .linkbrary-title > span {
@@ -1004,9 +989,9 @@
   }
 
   .linkbrary-title p {
-    margin-top: 35px;
+    margin-top: 28px;
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.7;
   }
@@ -1014,7 +999,7 @@
   .linkbrary-meta {
     grid-template-columns: repeat(2, 1fr);
 
-    row-gap: 25px;
+    row-gap: 22px;
   }
 
   .linkbrary-meta span {
@@ -1026,10 +1011,12 @@
   }
 
 
-  /* Cover */
+  /* =====================================================
+     COVER
+  ===================================================== */
 
   .linkbrary-cover {
-    padding: 60px 0 90px;
+    padding: 60px 0 85px;
   }
 
   .linkbrary-cover-image {
@@ -1051,6 +1038,7 @@
 
   .linkbrary-browser {
     width: 90%;
+
     height: 65%;
   }
 
@@ -1077,151 +1065,141 @@
   }
 
 
-  /* Sections */
+  /* =====================================================
+     SECTIONS
+  ===================================================== */
 
   .linkbrary-section {
-    padding: 100px 6vw;
+    padding: 80px 6vw;
 
     display: block;
   }
 
   .linkbrary-section-number {
-    margin-bottom: 55px;
+    margin-bottom: 38px;
   }
 
   .linkbrary-section-content h2 {
-    font-size: 36px;
+    font-size: 32px;
 
     line-height: 1.28;
 
-    letter-spacing: -2px;
+    letter-spacing: -1.8px;
   }
 
   .linkbrary-description {
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .linkbrary-description p {
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.9;
+    line-height: 1.85;
   }
 
 
-  /* Features */
-
-  .linkbrary-feature-section {
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
+  /* =====================================================
+     FEATURES
+  ===================================================== */
 
   .linkbrary-feature-list {
-    margin-top: 70px;
+    grid-template-columns: 1fr;
+
+    margin-top: 45px;
   }
 
   .linkbrary-feature {
-    padding: 30px 0;
+    min-height: auto;
 
-    grid-template-columns: 40px 1fr;
+    padding: 25px 0;
+
+    border-right: none;
   }
 
-  .linkbrary-feature:hover {
-    padding-left: 0;
+  .linkbrary-feature:nth-child(even) {
+    border-right: none;
   }
 
   .linkbrary-feature h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .linkbrary-feature p {
-    font-size: 12px;
-
-    line-height: 1.8;
-  }
-
-
-  /* Technology */
-
-  .linkbrary-tech-list {
-    margin-top: 65px;
-  }
-
-  .linkbrary-tech-item {
-    min-height: 95px;
-
-    grid-template-columns: 40px 1fr;
-  }
-
-  .linkbrary-tech-item strong {
-    font-size: 17px;
-  }
-
-  .linkbrary-tech-item p {
-    grid-column: 2;
-
-    margin-top: 5px;
-
     font-size: 11px;
   }
 
-  .linkbrary-tech-item:hover {
-    padding-left: 0;
+
+  /* =====================================================
+     TECHNOLOGY
+  ===================================================== */
+
+  .linkbrary-tech-list {
+    grid-template-columns: 1fr;
+
+    margin-top: 45px;
+  }
+
+  .linkbrary-tech-item {
+    min-height: 80px;
+
+    border-right: none;
+  }
+
+  .linkbrary-tech-item:nth-child(even) {
+    border-right: none;
   }
 
 
-  /* Role */
+  /* =====================================================
+     ROLE
+  ===================================================== */
 
   .linkbrary-role-list {
-    margin-top: 65px;
+    grid-template-columns: 1fr;
+
+    margin-top: 45px;
   }
 
   .linkbrary-role-list > div {
-    min-height: 75px;
+    min-height: 70px;
 
-    gap: 25px;
+    border-right: none;
   }
 
-  .linkbrary-role-list > div:hover {
-    padding-left: 0;
-  }
-
-  .linkbrary-role-list p {
-    font-size: 14px;
+  .linkbrary-role-list > div:nth-child(even) {
+    border-right: none;
   }
 
 
-  /* End */
+  /* =====================================================
+     DEVELOPMENT
+  ===================================================== */
+
+  .linkbrary-development {
+    padding-bottom: 100px;
+  }
+
+
+  /* =====================================================
+     LEARNING
+  ===================================================== */
+
+  .linkbrary-learning .linkbrary-section {
+    padding-bottom: 100px;
+  }
+
+
+  /* =====================================================
+     END
+  ===================================================== */
 
   .linkbrary-end {
-    min-height: 450px;
+    min-height: 360px;
   }
 
   .linkbrary-end a {
-    font-size: 48px;
+    font-size: 45px;
 
     letter-spacing: -3px;
   }
-}
-
-
-/* =========================================================
-   SAFETY
-========================================================= */
-
-.linkbrary-detail,
-.linkbrary-detail * {
-  max-width: 100%;
-}
-
-.linkbrary-detail {
-  overflow-x: hidden;
-}
-
-.linkbrary-detail h1,
-.linkbrary-detail h2,
-.linkbrary-detail h3,
-.linkbrary-detail p,
-.linkbrary-detail span,
-.linkbrary-detail a {
-  overflow-wrap: break-word;
 }
