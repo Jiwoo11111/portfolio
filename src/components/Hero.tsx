@@ -79,7 +79,7 @@ function Hero() {
 
         {/* BOTTOM */}
         <div className="hero-bottom">
-          <span>SEO JIWOO</span>
+          <span>SEOK JIWOO</span>
 
           <motion.div
             className="scroll"
