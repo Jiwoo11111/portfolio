@@ -93,7 +93,7 @@ function Experience() {
               <span>2024.12</span>
 
               <div>
-                <strong>정보처리기사</strong>
+                <strong>정보처리산업기사</strong>
                 <small>
                   한국산업인력공단
                 </small>
