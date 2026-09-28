@@ -350,27 +350,21 @@ function LinkbraryDetail() {
             <p className="linkbrary-eyebrow">WHAT I LEARNED</p>
 
             <h2>
-              API와 사용자 인터랙션을
-              <br />
-              연결하는 경험
+              성능과 사용자 경험을 함께 고민했습니다.
             </h2>
 
             <div className="linkbrary-description">
               <p>
-                API를 통해 전달되는 데이터를 실제 화면의
-                UI와 연결하면서 서버 데이터와 사용자
-                인터랙션의 관계를 이해할 수 있었습니다.
+                컴포넌트의 불필요한 렌더링을 줄이기 위해
+React.memo와 useCallback을 활용하며
+상황에 맞는 렌더링 최적화 방법을 적용했습니다.
               </p>
 
               <p>
-                특히 외부 플랫폼의 SDK와 API를 직접 조사하고
-                적용하면서 공식 문서를 읽고 필요한 기능을
-                찾아 실제 서비스에 적용하는 경험을 쌓았습니다.
-              </p>
-
-              <p>
-                팀 프로젝트를 진행하며 GitHub의 브랜치와
-                Pull Request를 활용한 협업 과정도 경험했습니다.
+                또한 Intersection Observer를 활용해
+사용자가 필요한 시점에 콘텐츠를 불러오는
+레이지 로딩을 구현하면서
+성능과 사용자 경험을 함께 고려하는 방법을 익혔습니다.
               </p>
             </div>
           </div>

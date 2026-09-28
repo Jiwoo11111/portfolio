@@ -25,7 +25,7 @@ function Hero() {
             transition={{ duration: 0.6 }}
             className="hero-subtitle"
           >
-            FRONTEND DEVELOPER
+            DEVELOPER
           </motion.p>
 
           <motion.h1
