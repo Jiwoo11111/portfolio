@@ -23,7 +23,7 @@ function About() {
           transition={{ duration: 0.7 }}
         >
           <p className="about-label">
-            FRONTEND DEVELOPER
+            FRONTEND-FOCUSED DEVELOPER
           </p>
 
           <h3>
@@ -41,22 +41,21 @@ function About() {
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           <p>
-            프론트엔드 개발을 중심으로 다양한
-            프로젝트를 경험했습니다.
+            React와 TypeScript를 기반으로 
+            다양한 웹 프로젝트를 구현하며 
+            프론트엔드 개발 경험을 쌓았습니다.
           </p>
 
           <p>
-            새로운 기술을 배우는 것에 그치지 않고,
-            실제 문제에 어떻게 적용할 수 있는지
-            고민하고 더 나은 사용자 경험으로
-            연결하는 과정을 중요하게 생각합니다.
+            화면을 만드는 데 그치지 않고, 
+            사용자의 흐름과 서비스가 동작하는 구조를 
+            함께 이해하려고 노력해왔습니다.
           </p>
 
           <p>
-            React와 TypeScript를 기반으로
-            재사용 가능한 컴포넌트를 만들고,
-            협업 과정에서 더 좋은 구조와
-            효율적인 개발 방법을 찾아왔습니다.
+            Node.js, Express, MongoDB를 활용해 
+            API와 데이터 처리까지 직접 구현하며 
+            프론트엔드와 백엔드를 연결하는 경험도 쌓았습니다.
           </p>
         </motion.div>
       </div>

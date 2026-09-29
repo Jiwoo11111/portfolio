@@ -10,6 +10,17 @@ const skillGroups = [
       "TypeScript",
       "React.js",
       "Next.js",
+      "React Native",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST API",
+      "Zod",
     ],
   },
   {
@@ -20,13 +31,14 @@ const skillGroups = [
     ],
   },
   {
-    title: "Other",
+    title: "Languages & Tools",
     skills: [
       "Python",
       "Java",
       "C#",
       "SQL",
-      "R",
+      "Git",
+      "GitHub",
     ],
   },
 ];

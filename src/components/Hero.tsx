@@ -25,7 +25,7 @@ function Hero() {
             transition={{ duration: 0.6 }}
             className="hero-subtitle"
           >
-            DEVELOPER
+            Frontend-focused Full-Stack Developer
           </motion.p>
 
           <motion.h1
