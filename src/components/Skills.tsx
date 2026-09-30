@@ -58,7 +58,7 @@ function Skills() {
       </motion.div>
 
       <div className="skill-groups">
-        {skillGroups.map((group, index) => (
+        {skillGroups.map((group, groupIndex) => (
           <motion.div
             className="skill-group"
             key={group.title}
@@ -73,24 +73,50 @@ function Skills() {
             viewport={{ once: true }}
             transition={{
               duration: 0.6,
-              delay: index * 0.1,
+              delay: groupIndex * 0.1,
             }}
           >
-            <span className="skill-group-title">
-              {group.title}
-            </span>
+            <div className="skill-group-header">
+              <span className="skill-group-number">
+                0{groupIndex + 1}
+              </span>
 
-            <div className="skill-list">
-              {group.skills.map((skill) => (
+              <h3>{group.title}</h3>
+            </div>
+
+            <div className="skill-grid">
+              {group.skills.map((skill, skillIndex) => (
                 <motion.div
-                  className="skill-item"
+                  className="skill-card"
                   key={skill}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.4,
+                    delay: groupIndex * 0.1 + skillIndex * 0.04,
+                  }}
                   whileHover={{
-                    x: 8,
+                    y: -6,
                   }}
                 >
-                  <span>{skill}</span>
-                  <span>↗</span>
+                  <span className="skill-card-index">
+                    {String(skillIndex + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="skill-card-name">
+                    {skill}
+                  </span>
+
+                  <span className="skill-card-arrow">
+                    ↗
+                  </span>
                 </motion.div>
               ))}
             </div>
